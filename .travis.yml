@@ -8,6 +8,12 @@ env:
   - APT_DEPENDENCIES="doxygen doxygen-latex libboost-all-dev libeigen3-dev liblapack-dev libblas-dev gfortran python-dev python-sphinx"
   - GIT_DEPENDENCIES="jrl-umi3218/jrl-mathtools jrl-umi3218/jrl-mal stack-of-tasks/dynamic-graph stack-of-tasks/dynamic-graph-python"
   - DEBSIGN_KEYID=5AE5CD75
+  matrix: # this section is for the Debian branch only
+  - DIST=unstable
+  - DIST=saucy
+  - DIST=raring
+  - DIST=quantal
+  - DIST=precise
 notifications:
   email:
   - hpp-source@laas.fr
